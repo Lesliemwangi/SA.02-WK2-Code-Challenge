@@ -41,7 +41,7 @@ You use git clone to be able to download the documents in the GitHub
 Git
 
 ### Installation instruction
-git@github.com/Lesliemwangi/SA.02-WK2-Code-Challenge.git
+git@github.com:Lesliemwangi/SA.02-WK2-Code-Challenge.git
 
 # Live Link
 https://github.com/Lesliemwangi/SA.02-WK2-Code-Challenge.git
