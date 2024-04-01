@@ -10,6 +10,7 @@ function primeNumbers(beginning, end) {
   let prime = [];
   // for ... of - used to iterate through an array
   for (let i = beginning; i <= end; i++) {
+    // If the number is prime, it is added to the prime array.
     if (isPrime(i)) {
       prime.push(i);
     }
@@ -19,18 +20,22 @@ function primeNumbers(beginning, end) {
 
 // Declare another function
 function isPrime(num) {
-    if (num <= 1) {
-        return false
+  // If the number is less than or equal to 1,it returns false since prime numbers start with 2.
+  if (num <= 1) {
+    return false;
+  }
+  // The Math. sqrt() - method returns the square root of a number
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    // If the number is divisible by any integer in this range, it returns false as it is not a prime number.
+    if (num % i === 0) {
+      return false;
     }
-    // The Math. sqrt() method returns the square root of a number
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) {
-            return false
-        }
-    }
-    return true
+  }
+  // If the number is not divisible by any integer in the range, it returns true indicating that it is a prime number.
+  return true;
 }
 
 // Execution
+console.log(primeNumbers(2, 5));
 console.log(primeNumbers(1, 10));
 console.log(primeNumbers(11, 20));
