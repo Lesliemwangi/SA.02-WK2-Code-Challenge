@@ -12,6 +12,9 @@ function primeNumbers(beginning, end) {
   for (let i = beginning; i <= end; i++) {
     // If the number is prime, it is added to the prime array.
     if (isPrime(i)) {
+      // .push - is used to add one or more elements to the end of an array and returns the new length of the array.
+      // prime is the array to which the value of i is being added.
+      // push(i) adds the value of i to the end of the prime array.
       prime.push(i);
     }
   }

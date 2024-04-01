@@ -7,7 +7,7 @@ but it doesn't ignore empty arguments.
 The concat method returns a new array containing elements from both arrays without modifying the original arrays.
 */
 
-// Declare an arrow function thet takes 2 parameters
+// Declare an arrow function that takes 2 parameters
 const myArray = (beginning, end) => {
   // This line concatenates the beginning array to the end array
   return beginning.concat(end);

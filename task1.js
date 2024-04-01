@@ -1,11 +1,11 @@
 /* Write a function that accepts a string as input and swaps the case of each character. 
  For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.*/
 
-//  Declare a function(caseChange)
+//  Declare a function(caseChange) with the parameter(phrase)
 function caseChange(phrase) {
   return (
     phrase
-      // split("") - split the phrase into a array of charecters
+      // split("") - split the phrase into a array of characters
       .split("")
       // The map method is used to loop over each character in the array and apply a transformation.
       .map((term) => {
