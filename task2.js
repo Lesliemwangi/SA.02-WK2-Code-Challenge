@@ -7,12 +7,18 @@ but it doesn't ignore empty arguments.
 The concat method returns a new array containing elements from both arrays without modifying the original arrays.
 */
 
-// Declare an arrow function that takes 2 parameters
-const myArray = (beginning, end) => {
-  // This line concatenates the beginning array to the end array
-  return beginning.concat(end);
-};
+// Declare a function with 2 parameters
+function valueRange(beginning, end) {
+  // find the difference between beginning and end
+  if (beginning - end == 0) {
+    return [beginning];
+  } else {
+    let num = valueRange(beginning, end - 1);
+    // .push - is used to add one or more elements to the end of an array and returns the new length of the array.
+    num.push(end);
+    return num;
+  }
+}
 
-// Function calls
-console.log(myArray([4, 5, 6], [7]));
-console.log(myArray([-4, -3, -2, -1, 0, 1, 2, 3, 4], [5, 6, 7]));
+console.log(valueRange(4, 7));
+console.log(valueRange(-4, 7));
